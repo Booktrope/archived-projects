@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Book_id: 
+  Genre_id: 
+
+two:
+  Book_id: 
+  Genre_id: 

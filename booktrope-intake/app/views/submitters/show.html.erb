@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @submitter.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @submitter.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @submitter.email %>
+</p>
+
+<p>
+  <strong>Phone location:</strong>
+  <%= @submitter.phone_location_id %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @submitter.phone_number %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @submitter.country %>
+</p>
+
+<p>
+  <strong>Pen name first:</strong>
+  <%= @submitter.pen_name_first %>
+</p>
+
+<p>
+  <strong>Pen name last:</strong>
+  <%= @submitter.pen_name_last %>
+</p>
+
+<%= link_to 'Edit', edit_submitter_path(@submitter) %> |
+<%= link_to 'Back', submitters_path %>

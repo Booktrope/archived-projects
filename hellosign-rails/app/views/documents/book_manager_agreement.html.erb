@@ -1,0 +1,15 @@
+<%= render 'shared/nav_bar' %>
+
+<h1 class='container'>Book Manager Agreement</h1>
+
+<div class='container'>
+  <%= form_tag '/documents' do %>
+    <%= hidden_field_tag 'name', 'Book Manager Agreement' %>
+    <%= label_tag :book_manager_name, 'Book Manager Name:' %>
+    <%= text_field_tag :book_manager_name %> <br>
+    <%= label_tag :book_manager_email, 'Book Manager Email Address:' %>
+    <%= email_field_tag :book_manager_email %>
+    <br><br>
+    <%= submit_tag 'Submit' %>
+  <% end %>
+</div>

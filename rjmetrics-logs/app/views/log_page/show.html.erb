@@ -1,0 +1,37 @@
+<h1>RJMetrics Logs</h1>
+<% 
+	def render_data(log_data)
+		if log_data.created_at > DateTime.parse("2015-03-11 00:00:00 UTC")
+			log_data["data"].gsub(/},/,"},<br />").html_safe
+		else
+			""
+		end 
+	end
+%>
+
+<div class="panel panel-default">
+	<table class="table table-striped">
+		<tr>
+			<th>#</th>
+			<th>Time</th>
+			<th>Code</th>
+			<th>Message</th>
+			<th>URL</th>
+			<th>RJTable</th>
+			<th>Payload</th>
+			<th>Raw Response</th>
+		</tr>
+	<% @logs.each_with_index do | log, index | %>
+		<tr>
+			<td><b><%= index %></b></td>
+			<td><small><%= Time.parse(log["createdAt"]).strftime("%Y/%m/%d <br /> %H:%M:%S %Z").html_safe %><small></td>
+			<td><%= log["code"] %></td>
+			<td><%= log["message"] %></td>
+			<td><small><%= log["base"] %></small></td>
+			<td><%= log["rjTable"] %></td>
+			<td><%= render_data log %></td>
+			<td><%= log["rawResponse"] %></td>
+		</tr>
+	<% end %>
+	</table>
+</div>

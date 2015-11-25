@@ -1,0 +1,17 @@
+<%= render 'shared/nav_bar' %>
+
+<h1 class='container'>Author Agreement</h1>
+
+<div class='container'>
+  <%= form_tag '/documents' do %>
+    <%= hidden_field_tag 'name', 'Author Agreement' %>
+    <%= label_tag :author_name, 'Author Name:' %>
+    <%= text_field_tag :author_name %> <br>
+    <%= label_tag :author_email, 'Author Email Address:' %>
+    <%= email_field_tag :author_email %> <br>
+    <%= label_tag :work_title, 'Title of Work:' %>
+    <%= text_field_tag :work_title %>
+    <br><br>
+    <%= submit_tag 'Submit' %>
+  <% end %>
+</div>
